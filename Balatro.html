@@ -1,6 +1,53 @@
 <!DOCTYPE html>
 <!-- saved from url=(0046)https://truffled.lol//games/balatro/index.html -->
-<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="./Balatro_files/js"></script>
+<html lang="en-us"><head>
+<script>
+  (function () {
+  const params = new URLSearchParams(window.location.search);
+
+  // Detect real PWA launch
+  const isPWA =
+    window.matchMedia('(display-mode: standalone)').matches ||
+    window.navigator.standalone === true;
+
+  if (isPWA) {
+    return; // allow page to continue parsing
+  }
+
+  // 🔥 HARD STOP — replaces document and halts parsing
+  document.write(`
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Protected</title>
+        <style>
+          html, body {
+            margin: 0;
+            height: 100%;
+            background: #0b5675;
+            color: #8ec3e3;
+            font-family: system-ui, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+          }
+          h1 { font-size: 1.8rem; line-height: 1.4; }
+        </style>
+      </head>
+      <body>
+        <h1>
+          This Game Is Protected From URL Stealing<br>
+          Please Launch In The App
+        </h1>
+      </body>
+    </html>
+  `);
+
+  document.close(); // ensures parsing stops
+})();
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="./Balatro_files/js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -138,6 +185,19 @@
   </script>
   <script type="text/javascript" src="./Balatro_files/game.js"></script>
   <script async="" type="text/javascript" src="./Balatro_files/love.js" onload="applicationLoad(this)"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(registration => {
+            console.log('Service Worker registered:', registration);
+          })
+          .catch(error => {
+            console.error('Service Worker registration failed:', error);
+          });
+      });
+    }
+  </script>
   <!-- <footer>
       <p>Built with <a href="https://github.com/Davidobot/love.js">love.js</a> <button onclick="goFullScreen();">Go Fullscreen</button><br>Hint: Reload the page if screen is blank</p>
     </footer> -->
