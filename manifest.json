@@ -1,6 +1,6 @@
 {
-  "name": "Deltarune",
-  "short_name": "Deltarune",
+  "name": "Balatro",
+  "short_name": "Balatro",
   "start_url": "./Balatro.html/?pwa",
   "display": "standalone",
   "background_color": "#121212",
