@@ -1,7 +1,7 @@
 const CACHE_NAME = "Balatro-cache-v1";
 const ASSETS = [
   "./",
-  "./Balatro.html",
+  "./index.html",
   "./512.png",
   "./192.png"
 ];
