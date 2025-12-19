@@ -19,13 +19,14 @@
             top: 0;
             left: 0;
             width: 100vw;
-            height: 100vh;
+            height: 100dvh;
             border: none;
         }
     </style>
 </head>
 <body>
-    <iframe src="./balatro.html" allowfullscreen></iframe>
+    <!-- <iframe src="./balatro.html" allowfullscreen></iframe> -->
+     <iframe scrolling="no" allowtransparency="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share" src="./balatro.html" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allowfullscreen="true" id="game_drop"></iframe>
     <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {

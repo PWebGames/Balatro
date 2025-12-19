@@ -1,4 +1,4 @@
-const CACHE_NAME = "Balatro-cache-v2";
+const CACHE_NAME = "Balatro-cache-v3";
 const ASSETS = [
   "./",
   "./index.html",
